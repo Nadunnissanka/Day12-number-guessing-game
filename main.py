@@ -35,12 +35,16 @@ else:
 print(f"You have {difficulty} attempts to guess the correct number!\n")
 
 for number in range(1,difficulty + 1):
+    remaining_guesses = difficulty
     player_guess = int(input("Enter your guess : "))
-
     if(player_guess > guess):
         print("Too High")
+        remaining_guesses -= 1
+        print(f"Remaning Guesses = {remaining_guesses}")
     elif(player_guess < guess):
         print("Too Low")
+        remaining_guesses -=1
+        print(f"Remaning Guesses = {remaining_guesses}")
     else:
         print("Your Guess is correct!")
     
