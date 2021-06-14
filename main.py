@@ -20,7 +20,9 @@ def guessing_number():
     return computer_guess
 
 guess = guessing_number()
-print(f"Computer guess is: {guess}")
+
+#uncomment below line to test the execution of code
+#print(f"Computer guess is: {guess}")
 
 option_difficulty = input("Enter your choice of difficulty: 'hard' or 'easy'?  ")
 if option_difficulty == "hard":
@@ -29,6 +31,8 @@ elif option_difficulty == "easy":
     difficulty = 10
 else:
     print("Invalid Input! Run Again")
+
+print(f"You have {difficulty} attempts to guess the correct number!\n")
 
 for number in range(1,difficulty + 1):
     player_guess = int(input("Enter your guess : "))
